@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sidhasewa</title>
+
+    <meta name="csrf-token" content="cMLpqpITVVXYUNf4ykit9WbLQGziDw4NDU9MdnKA">
+    <meta name="description" content="Cartzilla - Bootstrap E-commerce Template">
+    <meta name="keywords"
+          content="bootstrap, shop, e-commerce, market, modern, responsive,  business, mobile, bootstrap, html5, css3, js, gallery, slider, touch, creative, clean">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="icon" type="image/x-icon" href="http://sidhasewa.com/images/icons/favicon_io/512.png">
+    <!-- Vendor Styles including: Font Icons, Plugins, etc.-->
+    <link rel="stylesheet" media="screen" href="http://sidhasewa.com/frontend/dist/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="http://sidhasewa.com/frontend/dist/vendor/tiny-slider/dist/tiny-slider.css"/>
+    <link rel="stylesheet" media="screen"
+          href="http://sidhasewa.com/frontend/dist/vendor/drift-zoom/dist/drift-basic.min.css"/>
+    <link rel="stylesheet" media="screen"
+          href="http://sidhasewa.com/frontend/dist/vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
+    <!-- Main Theme Styles + Bootstrap-->
+    <script src="https://kit.fontawesome.com/3a27a035a2.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/13d7d65ca6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" media="screen" href="http://sidhasewa.com/frontend/dist/css/theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="http://sidhasewa.com/css/sidhasewa.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="path-to-the-file/splide.min.css">
+    <link rel="stylesheet" href="url-to-cdn/splide.min.css">
+    <script type="text/javascript" class="flasher-js">(function() {    var rootScript = 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.3.2/dist/flasher.min.js';    var FLASHER_FLASH_BAG_PLACE_HOLDER = {};    var options = mergeOptions([], FLASHER_FLASH_BAG_PLACE_HOLDER);    function mergeOptions(first, second) {        return {            context: merge(first.context || {}, second.context || {}),            envelopes: merge(first.envelopes || [], second.envelopes || []),            options: merge(first.options || {}, second.options || {}),            scripts: merge(first.scripts || [], second.scripts || []),            styles: merge(first.styles || [], second.styles || []),        };    }    function merge(first, second) {        if (Array.isArray(first) && Array.isArray(second)) {            return first.concat(second).filter(function(item, index, array) {                return array.indexOf(item) === index;            });        }        return Object.assign({}, first, second);    }    function renderOptions(options) {        if(!window.hasOwnProperty('flasher')) {            console.error('Flasher is not loaded');            return;        }        requestAnimationFrame(function () {            window.flasher.render(options);        });    }    function render(options) {        if ('loading' !== document.readyState) {            renderOptions(options);            return;        }        document.addEventListener('DOMContentLoaded', function() {            renderOptions(options);        });    }    if (1 === document.querySelectorAll('script.flasher-js').length) {        document.addEventListener('flasher:render', function (event) {            render(event.detail);        });            }    if (window.hasOwnProperty('flasher') || !rootScript || document.querySelector('script[src="' + rootScript + '"]')) {        render(options);    } else {        var tag = document.createElement('script');        tag.setAttribute('src', rootScript);        tag.setAttribute('type', 'text/javascript');        tag.onload = function () {            render(options);        };        document.head.appendChild(tag);    }})();</script>
+</head>
+<style>
+   @media only screen and (max-width: 600px) {
+        .input-group {
+            display: flex !important;
+
+        }
+
+        .navbar-collapse {
+            display: none !important;
+        }
+
+        .dropdown {
+            display: none !important;
+        }
+
+        .shadow-sm {
+            padding-bottom: 25px;
+            padding-top: 25px;
+        }
+
+        .nepal-flag {
+            margin-top: 40px !important;
+            margin-left: 270px !important;
+        }
+
+        .float-right {
+            margin-top: 14px;
+        }
+
+        .col-6 h4 {
+            font-size: 18px !important;
+        }
+
+    }
+    .dropdown-item:hover, .dropdown-item:focus {
+    color: var(--bs-dark);
+    
+}
+.btn-scroll-top{
+    font-size: 22px;
+}
+
+
+</style>
+<!-- Body-->
+
+<body class="handheld-toolbar-enabled">
+<!-- Sign in / sign up modal-->
+<style>
+    @media only screen and (max-width: 600px) {
+     .modal-content{
+         width: 395px !important;
+     } 
+     .modal-content  .d-flex{
+        justify-content: start !important;
+        margin-left: 120px !important;
+     }
+     
+     .form-group .col-6 input{
+         width: 150px;
+         margin-left: 83px;
+     }
+     .form-group{
+         display: flex;
+         flex-direction: column !important;
+         justify-content: center;
+     }
+     .form-group .col-6 .text-center{
+         width: 310px;
+     }
+     .form-group .col-6 select{
+     
+         margin-left: 83px;
+     }
+ }
+ </style>
+
+ <!-- starting -->
+<div class="modal fade" id="signin-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-secondary">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                    <li class="nav-item"><a class="nav-link fw-medium active" href="#signin-tab"
+                                            data-bs-toggle="tab" role="tab" aria-selected="true"><i
+                                class="ci-unlocked me-2 mt-n1"></i>Sign in</a></li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="#signup-tab" data-bs-toggle="tab"
+                                            role="tab" aria-selected="false"><i class="fa-regular fa-user me-2 mt-n1"></i>Sign
+                            up</a></li>
+                </ul>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body tab-content py-4">
+                <form class="needs-validation tab-pane fade show active" autocomplete="off" novalidate
+                      id="signin-tab">
+                    <div class="mb-3">
+                        <label class="form-label" for="si-email">Phone number</label>
+                        <input class="form-control" type="email" id="si-email" placeholder="johndoe@example.com"
+                               required>
+                        <div class="invalid-feedback">Please provide a valid email address.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="si-password">Password</label>
+                        <div class="password-toggle">
+
+                            <input class="form-control" type="password" id="si-password" required>
+                            <label class="password-toggle-btn" aria-label="Show/hide password">
+                                <input class="password-toggle-check" type="checkbox"><span
+                                    class="password-toggle-indicator"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3 d-flex flex-wrap justify-content-between">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="si-remember">
+                            <label class="form-check-label" for="si-remember">Remember me</label>
+                        </div>
+                        <a class="fs-sm" href="#">Forgot password?</a>
+                    </div>
+                    <button class="btn btn-primary btn-shadow d-block w-100" type="submit">Sign in</button>
+                </form>
+                <form class="needs-validation tab-pane fade" autocomplete="off" novalidate id="signup-tab">
+                    <div class="mb-3">
+                        <label class="form-label" for="su-name">Full name</label>
+                        <input class="form-control" type="text" id="su-name" placeholder="John Doe"
+                               required>
+                        <div class="invalid-feedback">Please fill in your name.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="su-email">Email address</label>
+                        <input class="form-control" type="email" id="su-email"
+                               placeholder="johndoe@example.com" required>
+                        <div class="invalid-feedback">Please provide a valid email address.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="su-password">Password</label>
+                        <div class="password-toggle">
+                            <input class="form-control" type="password" id="su-password" required>
+                            <label class="password-toggle-btn" aria-label="Show/hide password">
+                                <input class="password-toggle-check" type="checkbox"><span
+                                    class="password-toggle-indicator"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="su-password-confirm">Confirm password</label>
+                        <div class="password-toggle">
+                            <input class="form-control" type="password" id="su-password-confirm" required>
+                            <label class="password-toggle-btn" aria-label="Show/hide password">
+                                <input class="password-toggle-check" type="checkbox"><span
+                                    class="password-toggle-indicator"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-shadow d-block w-100" type="submit">Sign up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<main class="page-wrapper">
+
+    <!-- Quick View Modal-->
+    <div class="modal-quick-view modal fade" id="quick-view-electro" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title product-title"><a href="shop-single-v2.html" data-bs-toggle="tooltip"
+                                                             data-bs-placement="right" title="Go to product page">Smartwatch
+                            Youth Edition<i
+                                class="ci-arrow-right fs-lg ms-2"></i></a></h4>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+
+                        <!-- Product gallery-->
+                        <div class="col-lg-7 pe-lg-0">
+                            <div class="product-gallery">
+                                <div class="product-gallery-preview order-sm-2">
+                                    <div class="product-gallery-preview-item active" id="first"><img
+                                            class="image-zoom" src="frontend/dist/img/shop/single/gallery/05.jpg"
+                                            data-zoom="img/shop/single/gallery/05.jpg" alt="Product image">
+                                        <div class="image-zoom-pane"></div>
+                                    </div>
+                                    <div class="product-gallery-preview-item" id="second"><img
+                                            class="image-zoom" src="frontend/dist/img/shop/single/gallery/06.jpg"
+                                            data-zoom="img/shop/single/gallery/06.jpg" alt="Product image">
+                                        <div class="image-zoom-pane"></div>
+                                    </div>
+                                    <div class="product-gallery-preview-item" id="third"><img
+                                            class="image-zoom" src="frontend/dist/img/shop/single/gallery/07.jpg"
+                                            data-zoom="img/shop/single/gallery/07.jpg" alt="Product image">
+                                        <div class="image-zoom-pane"></div>
+                                    </div>
+                                    <div class="product-gallery-preview-item" id="fourth"><img
+                                            class="image-zoom" src="frontend/dist/img/shop/single/gallery/08.jpg"
+                                            data-zoom="img/shop/single/gallery/08.jpg" alt="Product image">
+                                        <div class="image-zoom-pane"></div>
+                                    </div>
+                                </div>
+                                <div class="product-gallery-thumblist order-sm-1"><a
+                                        class="product-gallery-thumblist-item active" href="#first"><img
+                                            src="frontend/dist/img/shop/single/gallery/th05.jpg"
+                                            alt="Product thumb"></a><a class="product-gallery-thumblist-item"
+                                                                       href="#second"><img
+                                            src="frontend/dist/img/shop/single/gallery/th06.jpg"
+                                            alt="Product thumb"></a><a class="product-gallery-thumblist-item"
+                                                                       href="#third"><img
+                                            src="frontend/dist/img/shop/single/gallery/th07.jpg"
+                                            alt="Product thumb"></a><a class="product-gallery-thumblist-item"
+                                                                       href="#fourth"><img
+                                            src="frontend/dist/img/shop/single/gallery/th08.jpg"
+                                            alt="Product thumb"></a></div>
+                            </div>
+                        </div>
+
+
+                        <!-- Product details-->
+                        <div class="col-lg-5 pt-4 pt-lg-0 image-zoom-pane">
+                            <div class="product-details ms-auto pb-3">
+                                <div class="mb-2">
+                                    <div class="star-rating"><i
+                                            class="star-rating-icon ci-star-filled active"></i><i
+                                            class="star-rating-icon ci-star-filled active"></i><i
+                                            class="star-rating-icon ci-star-filled active"></i><i
+                                            class="star-rating-icon ci-star-filled active"></i><i
+                                            class="star-rating-icon ci-star"></i>
+                                    </div>
+                                    <span class="d-inline-block fs-sm text-body align-middle mt-1 ms-1">74
+                                            Reviews</span>
+                                </div>
+                                <div class="h3 fw-normal text-accent mb-3 me-1">$124.<small>99</small></div>
+                                <div class="fs-sm mb-4"><span
+                                        class="text-heading fw-medium me-1">Color:</span><span class="text-muted"
+                                                                                               id="colorOptionText">Dark blue/Orange</span>
+                                </div>
+                                <div class="position-relative me-n4 mb-3">
+                                    <div class="form-check form-option form-check-inline mb-2">
+                                        <input class="form-check-input" type="radio" name="color"
+                                               id="color1" data-bs-label="colorOptionText"
+                                               value="Dark blue/Orange" checked>
+                                        <label class="form-option-label rounded-circle" for="color1"><span
+                                                class="form-option-color rounded-circle"
+                                                style="background-color: #f25540;"></span></label>
+                                    </div>
+                                    <div class="form-check form-option form-check-inline mb-2">
+                                        <input class="form-check-input" type="radio" name="color"
+                                               id="color2" data-bs-label="colorOptionText"
+                                               value="Dark gray/Green">
+                                        <label class="form-option-label rounded-circle" for="color2"><span
+                                                class="form-option-color rounded-circle"
+                                                style="background-color: #65805b;"></span></label>
+                                    </div>
+                                    <div class="form-check form-option form-check-inline mb-2">
+                                        <input class="form-check-input" type="radio" name="color"
+                                               id="color3" data-bs-label="colorOptionText" value="White">
+                                        <label class="form-option-label rounded-circle" for="color3"><span
+                                                class="form-option-color rounded-circle"
+                                                style="background-color: #f5f5f5;"></span></label>
+                                    </div>
+                                    <div class="form-check form-option form-check-inline mb-2">
+                                        <input class="form-check-input" type="radio" name="color"
+                                               id="color4" data-bs-label="colorOptionText" value="Black">
+                                        <label class="form-option-label rounded-circle" for="color4"><span
+                                                class="form-option-color rounded-circle"
+                                                style="background-color: #333;"></span></label>
+                                    </div>
+                                    <div class="product-badge product-available mt-n1"><i
+                                            class="ci-security-check"></i>Product available
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center pt-2 pb-4">
+                                    <select class="form-select me-3" style="width: 5rem;">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <button class="btn btn-primary btn-shadow d-block w-100" type="button"><i
+                                            class="ci-cart fs-lg me-2"></i>Add to Cart
+                                    </button>
+                                </div>
+                                <div class="d-flex mb-4">
+                                    <div class="w-100 me-3">
+                                        <button class="btn btn-secondary d-block w-100" type="button"><i
+                                                class="ci-heart fs-lg me-2"></i><span
+                                                class='d-none d-sm-inline'>Add to </span>Wishlist
+                                        </button>
+                                    </div>
+                                    <div class="w-100">
+                                        <button class="btn btn-secondary d-block w-100" type="button"><i
+                                                class="ci-compare fs-lg me-2"></i>Compare
+                                        </button>
+                                    </div>
+                                </div>
+                                <h5 class="h6 mb-3 py-2 border-bottom"><i
+                                        class="ci-announcement text-muted fs-lg align-middle mt-n1 me-2"></i>Product
+                                    info</h5>
+                                <h6 class="fs-sm mb-2">General</h6>
+                                <ul class="fs-sm pb-2">
+                                    <li><span class="text-muted">Model: </span>Amazfit Smartwatch</li>
+                                    <li><span class="text-muted">Gender: </span>Unisex</li>
+                                    <li><span class="text-muted">OS campitibility: </span>Android / iOS</li>
+                                </ul>
+                                <h6 class="fs-sm mb-2">Physical specs</h6>
+                                <ul class="fs-sm pb-2">
+                                    <li><span class="text-muted">Shape: </span>Rectangular</li>
+                                    <li><span class="text-muted">Body material: </span>Plastics / Ceramics</li>
+                                    <li><span class="text-muted">Band material: </span>Silicone</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navbar Electronics Store-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+</main>
+<style>
+    @media  only screen and (max-width: 600px) {
+        .task {
+            margin-left: 18px;
+        }
+    }
+</style>
+<div class=" task">
+    <style>
+    .glow {
+        border-radius: 10px;
+        border: 1px solid rgb(213, 210, 210);
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Arial;
+        font-size: 20px;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+
+    }
+
+    @media (max-width: 600px) {
+        .donate-button {
+            display: none;
+        }
+        /*.search-box{*/
+        /*    display: flex;*/
+        /*}*/
+        .navbar-tool {
+            display: none;
+        }
+
+        .sihasewa-txt {
+            display: none;
+        }
+    }
+</style>
+
+<header class="shadow-sm">
+    <div class="navbar-sticky bg-light">
+        <div class="row">
+        <div style=" height:3.5rem; background-color:#ffffff;"
+             class="d-flex align-content-center justify-content-center col-9">
+            <img src="http://sidhasewa.com/images/Nepal-flag.gif"
+                 style="transform: rotate(0turn); height:3.5rem; margin-top:4px; margin-left: 350px;" alt="nepal-flag" class="nepal-flag">
+        </div>
+            
+        </div>
+        <div class="navbar navbar-expand-lg navbar-light " style="padding: 0;">
+            <div class="container" style="max-width: 1305px !important; padding-left: 0;margin-top: -56px;" id="nav-responsive">
+                <a class="navbar-brand d-none d-sm-block me-3 flex-shrink-0" href="/">
+                    <img src="http://sidhasewa.com/images/sidhasewabeta.jpg" width="290" alt="sidhasewa" class="nav-logo">
+                </a>
+                <div class="input-group d-none d-lg-flex flex-nowrap mx-4 search-box">
+                    <form id="searchForm" action="/?search=" class="input-group d-none d-lg-flex flex-nowrap mx-4" method="get">
+                        <i class="fa-solid fa-search position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                        <input class="form-control-second form-control rounded-start  main-search" type="search"
+                               placeholder="Search for products"
+                               style="border-bottom-left-radius: 13rem !important; border-top-left-radius: 13rem !important;"
+                               name="search">
+                        <div class="form flex-shrink-0 d-flex search gap-2">
+                            <button class="btn searchbutton text-white" type="submit" id="searchButton">
+                                <i class="fas fa-search icon"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <script>
+                    document.getElementById('searchForm').addEventListener('submit', function (event) {
+                        event.preventDefault();
+
+                        const searchInput = document.querySelector('#searchForm input[name="search"]');
+                        const searchValue = searchInput ? searchInput.value : '';
+
+                        window.location.href = `/?search=${encodeURIComponent(searchValue)}#showfilterproduct`;
+                    });
+                </script>
+
+
+
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav d-flex" style="margin:0 !important;">
+                        <li class="nav-item">
+                            <a href="feedback.html" class="btn"><i style="font-size: 25px;"
+                                                                             class="fa-regular fa-comment"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="dropdown">
+                    <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false"
+                        style="font-weight: 600; font-size: 1.5rem; color: #000000;">
+                        <i class="fa-regular fa-user "></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="dropdown-item dropdown-header">Account</li>
+                        <li><a class="dropdown-item" href="login.html">
+                                <i class="fa-solid fa-key"></i> Login
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="mysupport">
+                    <div class=" float-right ml-2" style="margin-left: 35px; font-size: 13px;">
+                        <a href="index.html">sidhasewa.com.np</a>
+                        
+                    </div>
+                    <div class="btn glow ml-2  donate-button"
+                    style="color:rgb(247, 8, 8) !important; font-weight: 600; font-size:.8rem;white-space: nowrap;
+               transition: all 0.3s ease 0s; margin-left: 30px;">
+                   मेरो समर्थन <br><span style="color: rgb(17, 17, 17);  "><a style="color: rgb(247, 8, 8)" href="/feedback">मनबाट</a></span>
+                   |<span style="color: rgb(17, 17, 17); font-size:16px;"> <a style="color: green;" href="" data-toggle="modal" data-target="#donation">धनबाट</a></span>
+               </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+            <div class="container py-4 py-lg-5 my-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-5 ml-5 mr-5">
+                                <div class="card shadow" style="border: 1px solid rgba(0,0,0,0.16)">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <img class="text-center" src="http://sidhasewa.com/images/TextLogo.png" alt="textlogo">
+                        </div>
+                        <p class="mt-5 mb-2"
+                           style="font-size:16px; color: rgba(165,164,164,0.86); font-weight: 400 !important; margin-left:.5rem;">
+                            Welcome Back!!!</p>
+                        <h2 class="h4 m-2 mb-5" style="font-size: 2.8rem; font-weight: 500;">Sign in</h2>
+
+                        
+                        <form class="needs-validation mt-2" novalidate="" method="post"
+                              action="http://sidhasewa.com/member/login">
+                            <input type="hidden" name="_token" value="cMLpqpITVVXYUNf4ykit9WbLQGziDw4NDU9MdnKA">                            <div class="input-group mb-3"><i
+                                    class="fa-solid fa-phone position-absolute top-50 translate-middle-y text-muted fs-base ms-3"></i>
+                                <input class="form-control rounded-start"
+                                       name="phone" type="phone" value="" placeholder="Phone"
+                                       required="">
+                            </div>
+                            <div class="input-group mb-3"><i
+                                    class="fa-solid fa-lock position-absolute top-50 translate-middle-y text-muted fs-base ms-3"></i>
+                                <div class="password-toggle w-100">
+                                    <input class="form-control rounded-start" type="password" name="password" placeholder="Password"
+                                           required="">
+                                    <label class="password-toggle-btn" aria-label="Show/hide password">
+                                        <input class="password-toggle-check" type="checkbox"><span
+                                            class="password-toggle-indicator"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" checked="" id="remember_me">
+                                    <label class="form-check-label" for="remember_me">Remember me</label>
+                                </div>
+                                <a class="nav-link-inline fs-sm" href="http://sidhasewa.com/member/reset">Forgot
+                                    password?</a>
+                            </div>
+                            <hr class="mt-4">
+                            <div class="text-end pt-4 pb-3">
+                                <button class="btn btn-sm btn-primary" type="submit"><i
+                                        class="fa-solid fa-right-to-bracket me-2 ms-n21"></i>Sign In
+                                </button>
+                                <a href="signup.html" class="btn btn-sm btn-secondary btn-block"
+                                   style="width:5rem;">Sign up</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1">
+    <section style="padding-top: 10px; margin-top: 20px;">
+        <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold">Sidhasewa</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                    <p style="font-size: 1.3em;">
+                        शोषण रहित समाज निर्माणको लागि साझा चौतारी (पूर्ण बजार)
+                    </p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold">Products/ Services</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 80px; background-color: #7c4dff; height: 2px" />
+                    <p>
+                        <a href="#!" class="text-dark">Vegetables</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-dark">Clothes</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-dark">Jobs</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-dark">Machinary & parts</a>
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold">Useful links</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                    <p>
+                        <a href="#!" class="text-dark">Your Account</a>
+                    </p>
+                    <p>
+                        <a href="signup.html" class="text-dark">Privacy Policy</a>
+                    </p>
+                    <p>
+                        <a href="signup.html" class="text-dark">Term and Conditions</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-dark">Help</a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold">Contact</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                    <p><i class="fas fa-store mr-3"></i> Swayambhu, Kathmandu, Nepal</p>
+                    <p><i class="fas fa-envelope mr-3"></i> sidhasewa@gmail.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> +977 9876347346</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © Sidhasewa 2023. All Rights <br>
+        Designed & Developed by - <a class="text-dark" href="https://eeeinnovation.com.np/">EEE Innovation Ghar</a>
+    </div>
+</footer>
+</div>
+
+<!-- Toolbar for handheld devices (Default)-->
+<div class="handheld-toolbar">
+    <div class="d-table table-layout-fixed w-100">
+        <a class="d-table-cell handheld-toolbar-item" href="index.html"><span class="handheld-toolbar-icon"><i
+                    class="fa-solid fa-house"></i></span><span class="handheld-toolbar-label">Home</span></a>
+        <a class="d-table-cell handheld-toolbar-item" href="feedback.html"><span class="handheld-toolbar-icon"><i
+                    class="fa-solid fa-message"></i></span><span class="handheld-toolbar-label">Feedback</span></a>
+        <a class="d-table-cell handheld-toolbar-item" href="mblcategory.html" >
+            <span class="handheld-toolbar-icon">
+                <i class="ri-layout-grid-fill"></i>
+            </span>
+            <span class="handheld-toolbar-label">
+                Category</span>
+        </a>
+        <a class="d-table-cell handheld-toolbar-item" href="account-wishlist.html" data-toggle="modal"
+            data-target="#exampleModalCenter"><span class="handheld-toolbar-icon"><i
+                    class="fa-solid fa-square-plus"></i></span><span class="handheld-toolbar-label">Add
+                post</span></a>
+
+
+
+
+
+        <a class="d-table-cell handheld-toolbar-item" href="login.html"><span class="handheld-toolbar-icon"><i
+                    class="fa-solid fa-user"></i></span><span class="handheld-toolbar-label">Profile</span></a>
+    </div>
+</div>
+
+
+
+
+<!-- Back To Top Button-->
+<a class="btn-scroll-top" href="#top" data-scroll>
+    <span class="btn-scroll-top-tooltip text-muted fs-sm">Top</span>
+    <i class="btn-scroll-top-icon fa-solid fa-arrow-up" style="margin-right:12px; font-size: 21px;">
+    </i>
+</a>
+
+<!--select category model-->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="width: 50%;">
+        <form action="http://sidhasewa.com/member/posts/create" method="POST">
+            <input type="hidden" name="_token" value="cMLpqpITVVXYUNf4ykit9WbLQGziDw4NDU9MdnKA">            <div class="modal-content p-4" style="    width: 650px; height:80vh;">
+                <div class="d-flex justify-content-center gap-2">
+                    <h3 class="text-center mb-4" style="color: blue;">स्वागतम्</h3> <span> <img
+                            src="http://sidhasewa.com/images/namaste.png" alt="" width="40px" height="40px"></span>
+
+                </div>
+                <h3 class="text-center mb-4">Select Category:</h3>
+
+                <div class="form-group row">
+                    <div class="col-6">
+                        <label for="category" class="mb-2 text-center"><p style="margin: 0;padding: 0;">वस्तु/सेवाको
+                                संकेत नम्बर राख्नुहोस</p>
+                            <p style="margin: 0;padding: 0;">Category Code:</p>
+
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <input type="number">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-6 mt-3">
+                        <label for="category" class="mb-2 text-center"><p style="margin: 0;padding: 0;">वस्तु/सेवाको
+                                प्रमुख समूह छनौट गर्नुहोस</p>
+                            <p style="margin: 0;padding: 0;">Choose a major group of
+                                goods/services</p>
+
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <select name="parent_category" value="" id="parentCategory"
+                                class="form-control select2bs4 my-3" aria-label="Default select example">
+                            <option selected value="" disabled>Select a Parent Category</option>
+                                                            <option value="1">
+                                    कृषि / बनस्पती उपजहरू 
+                                </option>
+                                                            <option value="2">
+                                    जिवजन्तु/पशुपन्छिमा आधारित
+                                </option>
+                                                            <option value="3">
+                                    पोशाक/पहिरन
+                                </option>
+                                                            <option value="4">
+                                    फर्निचरसँग समबन्धी
+                                </option>
+                                                            <option value="5">
+                                    उर्जाबाट चल्ने सामाग्री
+                                </option>
+                                                            <option value="6">
+                                    औजार/पाट्पुर्जा/सामाग्रीहरू
+                                </option>
+                                                            <option value="7">
+                                    औद्योगिक उत्पादनहरू
+                                </option>
+                                                            <option value="8">
+                                    कला/संगीत/संस्कृति
+                                </option>
+                                                            <option value="9">
+                                    शिक्षा/स्वास्थ्य/खेलकुद
+                                </option>
+                                                            <option value="10">
+                                    घर व्यवस्थापन सम्बन्धी
+                                </option>
+                                                            <option value="11">
+                                    दर्ता/नवीकरण/खारेजी
+                                </option>
+                                                            <option value="12">
+                                    रोजगारी/जनशक्ति
+                                </option>
+                                                            <option value="13">
+                                    घर
+                                </option>
+                                                            <option value="14">
+                                    जग्गा
+                                </option>
+                                                            <option value="15">
+                                    कोठा
+                                </option>
+                                                            <option value="16">
+                                    सवारी साधन
+                                </option>
+                                                            <option value="17">
+                                    व्यावसाय/पसल
+                                </option>
+                                                            <option value="18">
+                                    मोबाइल/सामान
+                                </option>
+                                                    </select>
+                    </div>
+                </div>
+                <div class="form-group row mt-5" id="subCategorySelect">
+                    <div class="col-6">
+                        <label for="category" class="mb-2 text-center"><p style="margin: 0;padding: 0;">वस्तु/सेवाको उप
+                                समूह छनौट गर्नुहोस</p>
+                            <p style="margin: 0;padding: 0;">Choose a sub group of
+                                goods/services</p>
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <select name="subparent_category" value="" id="subCategory"
+                                class="form-control select2bs4" aria-label="Default select example">
+                            <option selected value="" disabled>Select a sub Category</option>
+                        </select>
+                    </div>
+
+
+                </div>
+                <div class="form-group row mt-5" id="childCategorySelect">
+                    <div class="col-6">
+                        <label for="category" class="mb-2 text-center"><p style="margin: 0;padding: 0;">वस्तु/सेवाको उप
+                                समूह छनौट गर्नुहोस</p>
+                            <p style="margin: 0;padding: 0;">Choose a sub group of
+                                goods/services</p>
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <select name="category_id" value="" id="childCategory"
+                                class="form-control select2bs4" aria-label="Default select example">
+                            <option selected value="" disabled>Select a child Category</option>
+                        </select>
+                                            </div>
+
+                </div>
+                <button type="submit" class="btn-sm btn btn-primary mt-3">Next</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content border-0">
+                <div class="modal-body p-0 popup ">
+                    <div class="card border-0 p-sm-2 p-2 justify-content-center " id="popup">
+                        <div class=" pb-0  border-0 ">
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+
+                            <h5 class="modal-title text-center m-4" id="staticBackdropLabel">Select a Category</h5>
+                        </div>
+
+                        <div class="card-body px-sm-4 mb-2 pt-1 pb-0">
+                            <div class="row no-gutters">
+                                <div class="col-auto">
+                                    <button type="button" data-dismiss="modal" class="btn btn-success px-3"
+                                            style="margin-right: 5px;">Confirm
+                                    </button>
+                                </div>
+                                <!-- <div class="col-auto">
+                                                <button type="button"
+                                                    class="btn btn-light text-muted"
+                                                    data-dismiss="modal">common.cancel</button>
+                                            </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="donation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content p-4">
+            <div class="d-flex justify-content-around">
+                <img src="http://sidhasewa.com/images/sidhasewaQr.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+
+<!-- Vendor scripts: js libraries and plugins-->
+<script src="http://sidhasewa.com/frontend/dist/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="http://sidhasewa.com/frontend/dist/vendor/simplebar/dist/simplebar.min.js"></script>
+<script src="http://sidhasewa.com/frontend/dist/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+<script src="http://sidhasewa.com/frontend/dist/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="http://sidhasewa.com/frontend/dist/vendor/drift-zoom/dist/Drift.min.js"></script>
+<script src="http://sidhasewa.com/frontend/dist/vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+<script src="http://sidhasewa.com/frontend/dist/vendor/lg-video.js/dist/lg-video.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="path-to-the-file/splide.min.js"></script>
+<!-- Main theme script-->
+<script src=http://sidhasewa.com/frontend/dist/js/theme.min.js></script>
+
+<script>
+    $(document).ready(function () {
+
+        // Subcategory Dropdown
+        $('#parentCategory').change(function () {
+            var parentCategoryId = $(this).val();
+            var subCategorySelect = $('#subCategory');
+
+            subCategorySelect.empty();
+            subCategorySelect.append('<option selected disabled value="">Select your subcategory</option>');
+
+            if (!parentCategoryId) {
+                return;
+            }
+
+            fetchCategories(parentCategoryId, subCategorySelect);
+        });
+
+        // Child Category Dropdown
+        $('#subCategory').change(function () {
+            var subCategoryId = $(this).val();
+            var childCategorySelect = $('#childCategory');
+
+            childCategorySelect.empty();
+            childCategorySelect.append('<option selected disabled value="">Select your child category</option>');
+
+            if (!subCategoryId) {
+                return;
+            }
+
+            fetchCategories(subCategoryId, childCategorySelect);
+        });
+
+        // Function to Fetch Categories via AJAX
+        function fetchCategories(parentCategoryId, categoryDropdown) {
+            var base_url = 'https://sidhasewa.com';
+
+            $.ajax({
+                url: base_url + '/category-list/' + parentCategoryId,
+                type: "GET",
+                success: function (data) {
+                    populateCategories(data, categoryDropdown);
+                },
+                error: function () {
+                    // Handle error
+                }
+            });
+        }
+
+        function populateCategories(data, dropdown) {
+            $.each(data, function (key, value) {
+                dropdown.append('<option value="' + value.id + '">' + value.nepali_name + '</option>');
+            });
+        }
+    });
+</script>
+
+<script>
+    setTimeout(function () {
+        $(".alert-success").alert('close');
+    }, 2000);
+
+    function toggleCategory() {
+        var categorySection = document.getElementById('categorySection');
+        categorySection.classList.toggle('show-category');
+    }
+</script>
+
+</html>
