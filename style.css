@@ -265,4 +265,23 @@ a {
     color: var(--bs-dark);
     
 }
+marquee{
+    font-size: 20px;
+    color:  #dc3545;
+}
+.rightTI { 
+    color: #ff002b;
+    white-space: nowrap; 
+    overflow: hidden;
+    animation: marquee 20s linear infinite;
+  }
+  .rightTI:hover {
+    animation-play-state: paused;
+  }
+  @-webkit-keyframes marquee {
+    0% {text-indent: 100%;}
+    100% {text-indent: -100%;}
+  }
+
+
 

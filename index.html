@@ -44,34 +44,38 @@
     <!-- Sign in / sign up modal-->
     <style>
         @media only screen and (max-width: 600px) {
-         .modal-content{
-             width: 395px !important;
-         } 
-         .modal-content  .d-flex{
-            justify-content: start !important;
-            margin-left: 120px !important;
-         }
-         
-         .form-group .col-6 input{
-             width: 150px;
-             margin-left: 83px;
-         }
-         .form-group{
-             display: flex;
-             flex-direction: column !important;
-             justify-content: center;
-         }
-         .form-group .col-6 .text-center{
-             width: 310px;
-         }
-         .form-group .col-6 select{
-         
-             margin-left: 83px;
-         }
-     }
-     </style>
- 
-     <!-- starting -->
+            .modal-content {
+                width: 395px !important;
+            }
+
+            .modal-content .d-flex {
+                justify-content: start !important;
+                margin-left: 120px !important;
+            }
+
+            .form-group .col-6 input {
+                width: 150px;
+                margin-left: 83px;
+            }
+
+            .form-group {
+                display: flex;
+                flex-direction: column !important;
+                justify-content: center;
+            }
+
+            .form-group .col-6 .text-center {
+                width: 310px;
+            }
+
+            .form-group .col-6 select {
+
+                margin-left: 83px;
+            }
+        }
+    </style>
+
+    <!-- starting -->
     <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -155,7 +159,7 @@
     </div>
     <main class="page-wrapper">
 
-      
+
 
         <!-- Navbar Electronics Store-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -203,6 +207,8 @@
         </style>
         <!-- heading -->
         <header class="shadow-sm">
+            <div class="rightTI li" >सिधसेवा गृहपृष्ठमा
+                स्वागत छ !!</div>
             <div class="navbar-sticky bg-light">
                 <div class="row">
                     <div style=" height:3.5rem; background-color:#ffffff;"
@@ -253,7 +259,8 @@
                         <div class="collapse navbar-collapse d-flex">
                             <ul class="navbar-nav d-flex" style="margin:0 !important;">
                                 <li class="nav-item">
-                                    <a href="feedback.html" class="btn"><i style="font-size: 25px;" class="fa-regular fa-comment"></i></a>
+                                    <a href="feedback.html" class="btn"><i style="font-size: 25px;"
+                                            class="fa-regular fa-comment"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -290,6 +297,40 @@
                 </div>
             </div>
         </header>
+        <!-- script for marquee -->
+        <script>
+            var rightJS = {
+                init: function () {
+                    rightJS.Tags = document.querySelectorAll('.rightJS');
+                    for (var i = 0; i < rightJS.Tags.length; i++) {
+                        rightJS.Tags[i].style.overflow = 'hidden';
+                    }
+                    rightJS.Tags = document.querySelectorAll('.rightJS div');
+                    for (var i = 0; i < rightJS.Tags.length; i++) {
+                        rightJS.Tags[i].style.position = 'relative';
+                        rightJS.Tags[i].style.right = '-' + rightJS.Tags[i].parentElement.offsetWidth + 'px';
+                    }
+                    rightJS.loop();
+                },
+                loop: function () {
+                    for (var i = 0; i < rightJS.Tags.length; i++) {
+                        var x = parseFloat(rightJS.Tags[i].style.right);
+                        x++;
+                        var W = rightJS.Tags[i].parentElement.offsetWidth;
+                        var w = rightJS.Tags[i].offsetWidth;
+                        if ((x / 100) * W > w) x = -W;
+                        if (rightJS.Tags[i].parentElement.parentElement.querySelector(':hover') !== rightJS.Tags[i].parentElement) rightJS.Tags[i].style.right = x + 'px';
+                    }
+                    requestAnimationFrame(this.loop.bind(this));
+                }
+            };
+            window.addEventListener('load', rightJS.init);
+        </script>
+  <!-- end for marquee -->
+
+
+
+
         <!-- heading's style -->
         <style>
             .fix-category-div {
@@ -608,7 +649,8 @@
                             <h5 style="">
                                 बस्तुहरु - सेवाहरु</h5>
                             <h6 id="customOpenModalBtn" style="cursor:pointer;color:#2865c3;">Goods
-                                - Services <span><i style="color: #2865c3;" class="fa-solid fa-bars  gs-icon "></i></span>
+                                - Services <span><i style="color: #2865c3;"
+                                        class="fa-solid fa-bars  gs-icon "></i></span>
                             </h6>
                         </div>
                         <div class="categories-div" style="background-color: black;">
@@ -958,8 +1000,7 @@
                                                 </div>
                                             </a>
                                             <a href="category-361.html
-                                            "
-                                                class="mega-dropdown-column pt-2 pb-0 py-sm-2 px-2">
+                                            " class="mega-dropdown-column pt-2 pb-0 py-sm-2 px-2">
                                                 <div class="widget widget-links">
                                                     <p class="fs-base mb-1">प्रसोधन गरिएका उपजहरु</p>
                                                 </div>
@@ -1632,8 +1673,8 @@
 
 
                     <!-- Trigger the modal with a button -->
-                    <button type="button" class="btn btn-info btn-lg ml-5" data-toggle="modal"
-                        data-target="#myModal"><i class="fa-solid fa-list"></i>
+                    <button type="button" class="btn btn-info btn-lg ml-5" data-toggle="modal" data-target="#myModal"><i
+                            class="fa-solid fa-list"></i>
                     </button>
 
                     <!-- Modal -->
@@ -1708,8 +1749,7 @@
                         </div>
                     </div>
 
-                    <a href="feedback.html"
-                        class=" btn btn-primary align-item-center d-flex">प्रतिक्रिया</a>
+                    <a href="feedback.html" class=" btn btn-primary align-item-center d-flex">प्रतिक्रिया</a>
                     <div class="btn glow fire-donate" style="color:rgb(247, 8, 8) !important; font-weight: 600; font-size:.8rem;white-space: nowrap;
                 transition: all 0.3s ease 0s;">
                         मेरो समर्थन <br><span style="color: rgb(17, 17, 17);  "><a style="color: rgb(247, 8, 8)"
@@ -1871,10 +1911,12 @@
                                 <div class="d-flex mb-3">
                                     <div
                                         class="bs1_viewed_prev d-flex align-items-center justify-content-center slider-btn">
-                                        <i class="fas fa-chevron-left"></i></div>
+                                        <i class="fas fa-chevron-left"></i>
+                                    </div>
                                     <div
                                         class="bs1_viewed_next d-flex align-items-center justify-content-center slider-btn">
-                                        <i class="fas fa-chevron-right"></i></div>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </div>
                                 </div>
                             </div>
 
@@ -1942,10 +1984,12 @@
                                 <div class="d-flex mb-3">
                                     <div
                                         class="bs2_viewed_prev d-flex align-items-center justify-content-center slider-btn">
-                                        <i class="fas fa-chevron-left"></i></div>
+                                        <i class="fas fa-chevron-left"></i>
+                                    </div>
                                     <div
                                         class="bs2_viewed_next d-flex align-items-center justify-content-center slider-btn">
-                                        <i class="fas fa-chevron-right"></i></div>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="bs2_viewed_slider owl-carousel owl-theme" id="fast-needed-carousel">
@@ -1974,12 +2018,12 @@
                                 <h3 class="card-head" style="text-align: center;">मकै</h3>
                                 <h5> हरियो मकै........</h5>
                                 <div class="current-price">
-                                    <h4 class="price">मूल्य  <span>Rs. 12 per piece</span></h4>
+                                    <h4 class="price">मूल्य <span>Rs. 12 per piece</span></h4>
                                 </div>
                                 <div class="location">
                                     <span>मकवानपुर</span>
                                 </div>
-                              
+
 
                             </div>
                         </div>
@@ -1989,14 +2033,14 @@
                             <img src="kamal.png" class="card-img-top" alt="product-1">
                             <div class="card-body">
                                 <h3 class="card-head" style="text-align: center;">फुल</h3>
-                                <h5>  Flower Seed</h5>
+                                <h5> Flower Seed</h5>
                                 <div class="current-price">
-                                    <h4 class="price">मूल्य  <span>Rs. 12 per piece</span></h4>
+                                    <h4 class="price">मूल्य <span>Rs. 12 per piece</span></h4>
                                 </div>
                                 <div class="location">
                                     <span>सिन्धुपाल्चोक</span>
                                 </div>
-                              
+
 
                             </div>
                         </div>
@@ -2008,12 +2052,12 @@
                                 <h3 class="card-head" style="text-align: center;">मोटरसाइकल</h3>
                                 <h5> Honda</h5>
                                 <div class="current-price">
-                                    <h4 class="price">मूल्य  <span>Rs. 180000/-</span></h4>
+                                    <h4 class="price">मूल्य <span>Rs. 180000/-</span></h4>
                                 </div>
                                 <div class="location">
-                                    <span>काठमाडौं  </span>
+                                    <span>काठमाडौं </span>
                                 </div>
-                              
+
 
                             </div>
                         </div>
@@ -2025,12 +2069,12 @@
                                 <h3 class="card-head" style="text-align: center;">गोलभेडा</h3>
                                 <h5> ताजा गोलभेडा........</h5>
                                 <div class="current-price">
-                                    <h4 class="price">मूल्य  <span>Rs.22/per KG</span></h4>
+                                    <h4 class="price">मूल्य <span>Rs.22/per KG</span></h4>
                                 </div>
                                 <div class="location">
                                     <span>काभ्रेपलाञ्चोक</span>
                                 </div>
-                              
+
 
                             </div>
                         </div>
@@ -2042,12 +2086,12 @@
                                 <h3 class="card-head" style="text-align: center;">मकै</h3>
                                 <h5> हरियो मकै........</h5>
                                 <div class="current-price">
-                                    <h4 class="price">मूल्य  <span>Rs. 12 per piece</span></h4>
+                                    <h4 class="price">मूल्य <span>Rs. 12 per piece</span></h4>
                                 </div>
                                 <div class="location">
                                     <span>सिन्धुपाल्चोक</span>
                                 </div>
-                              
+
 
                             </div>
                         </div>
@@ -2755,11 +2799,10 @@
     <!-- Toolbar for handheld devices (Default)-->
     <div class="handheld-toolbar">
         <div class="d-table table-layout-fixed w-100">
-            <a class="d-table-cell handheld-toolbar-item" href="index.html"><span
-                    class="handheld-toolbar-icon"><i class="fa-solid fa-house"></i></span><span
-                    class="handheld-toolbar-label">गृह</span></a>
-            <a class="d-table-cell handheld-toolbar-item" href="feedback.html"><span
-                    class="handheld-toolbar-icon"><i class="fa-solid fa-message"></i></span><span
+            <a class="d-table-cell handheld-toolbar-item" href="index.html"><span class="handheld-toolbar-icon"><i
+                        class="fa-solid fa-house"></i></span><span class="handheld-toolbar-label">गृह</span></a>
+            <a class="d-table-cell handheld-toolbar-item" href="feedback.html"><span class="handheld-toolbar-icon"><i
+                        class="fa-solid fa-message"></i></span><span
                     class="handheld-toolbar-label">प्रतिक्रिया</span></a>
             <a class="d-table-cell handheld-toolbar-item" href="mblcategory.html">
                 <span class="handheld-toolbar-icon">
@@ -2770,15 +2813,15 @@
             </a>
             <a class="d-table-cell handheld-toolbar-item" href="account-wishlist.html" data-toggle="modal"
                 data-target="#exampleModalCenter"><span class="handheld-toolbar-icon"><i
-                        class="fa-solid fa-square-plus"></i></span><span class="handheld-toolbar-label">पोस्ट थप्नुहोस्</span></a>
+                        class="fa-solid fa-square-plus"></i></span><span class="handheld-toolbar-label">पोस्ट
+                    थप्नुहोस्</span></a>
 
 
 
 
 
-            <a class="d-table-cell handheld-toolbar-item" href="login.html"><span
-                    class="handheld-toolbar-icon"><i class="fa-solid fa-user"></i></span><span
-                    class="handheld-toolbar-label">प्रोफाइल</span></a>
+            <a class="d-table-cell handheld-toolbar-item" href="login.html"><span class="handheld-toolbar-icon"><i
+                        class="fa-solid fa-user"></i></span><span class="handheld-toolbar-label">प्रोफाइल</span></a>
         </div>
     </div>
 
