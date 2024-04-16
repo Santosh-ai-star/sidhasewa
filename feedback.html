@@ -392,9 +392,25 @@
                     display: none;
                 }
             }
+            
+.rightTI { 
+    color: #ff002b;
+    white-space: nowrap; 
+    overflow: hidden;
+    animation: marquee 20s linear infinite;
+  }
+  .rightTI:hover {
+    animation-play-state: paused;
+  }
+  @-webkit-keyframes marquee {
+    0% {text-indent: 100%;}
+    100% {text-indent: -100%;}
+  }
+
         </style>
 
         <header class="shadow-sm">
+            <div class="rightTI li" >प्रतिक्रिया पृष्ठमा स्वागत छ !!</div>
             <div class="navbar-sticky bg-light">
                 <div class="row">
                     <div style=" height:3.5rem; background-color:#ffffff;"

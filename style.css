@@ -265,10 +265,7 @@ a {
     color: var(--bs-dark);
     
 }
-marquee{
-    font-size: 20px;
-    color:  #dc3545;
-}
+
 .rightTI { 
     color: #ff002b;
     white-space: nowrap; 
